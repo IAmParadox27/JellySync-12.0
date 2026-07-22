@@ -39,8 +39,12 @@ async function start() {
 
   // Perform initial full sync if master server is configured
   if (config.masterServer) {
-    console.log('\n[FULL-SYNC] Performing initial sync on startup...');
-    await performFullSync(config);
+    if (config.initialFullSync) {
+      console.log('\n[FULL-SYNC] Performing initial sync on startup...');
+      await performFullSync(config);
+    } else {
+      console.log('\n[FULL-SYNC] Skipping initial sync on-startup due to config.')
+    }
 
     // Schedule periodic full syncs
     scheduleFullSync(config);

@@ -29,5 +29,6 @@
     "retries": 5,
     "retrySleepMs": 2000
   },
-  "ignoreTargetPlayState": false
+  "ignoreTargetPlayState": false,
+  "initialFullSync": true
 }
