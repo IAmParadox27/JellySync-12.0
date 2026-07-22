@@ -28,5 +28,6 @@
     "postCopyDelaySeconds": 0,
     "retries": 5,
     "retrySleepMs": 2000
-  }
+  },
+  "ignoreTargetPlayState": false
 }
